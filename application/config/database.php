@@ -76,7 +76,6 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'port' => 8889,
 	'username' => 'root',
 	'password' => 'root',
 	'database' => 'toabookings',
