@@ -18,7 +18,7 @@
 
 <script src="<?=base_url()?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
 
-<?php if (isset($ajaxtable )) { ?>
+<?php if (isset($subData['data_url'] )) { ?>
 
 <script>
     $.widget.bridge('uibutton', $.ui.button);
@@ -33,7 +33,7 @@ $(document).ready(function() {
       "processing": true,
       "serverSide": true,
       "ordering": false,
-      "ajax": "<?=$ajaxtable?>"
+      "ajax": "<?=$subData['data_url']?>"
     } );
 } );
 
