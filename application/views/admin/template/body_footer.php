@@ -18,6 +18,11 @@
 
 <script src="<?=base_url()?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
 
+<!--
+<script src="<?=base_url()?>dist/js/pages/dashboard.js"></script>
+<script src="<?=base_url()?>dist/js/demo.js"></script>
+-->
+
 <?php if (isset($subData['data_url'] )) { ?>
 
 <script>

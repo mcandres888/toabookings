@@ -2,10 +2,10 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Monitor. Schedule. Connect...
+      Online Bookings
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">BusGPS Company</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2017 <a href="#">ToaBooking Company</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

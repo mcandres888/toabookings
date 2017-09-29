@@ -38,7 +38,11 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('contact_us');
 	}
-
+	public function admin()
+	{
+		$temp  = site_url() . "/admin" ;
+		redirect($temp);
+	}
 
 
 

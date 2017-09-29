@@ -21,7 +21,7 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                  <a href="<?=base_url()?>index.php/main/logout" class="btn  btn-block ">Sign out</a>
+                  <a href="<?=base_url()?>index.php/admin/logout" class="btn  btn-block ">Sign out</a>
               </li>
             </ul>
           </li>
@@ -29,5 +29,3 @@
       </div>
     </nav>
   </header>
-
-
