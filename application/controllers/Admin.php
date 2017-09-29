@@ -117,7 +117,7 @@ class Admin extends CI_Controller {
       $view_data['nav'][] = array("href" => $base  ."index.php/admin/merchant_dashboard", "class"=> "fa fa-line-chart", "text"=>"Dashboard");
       $view_data['nav'][] = array("href" => $base  ."index.php/admin/bookings", "class"=> "fa fa-ticket", "text"=>"Requested Bookings");
       $view_data['nav'][] = array("href" => $base  ."index.php/admin/rooms", "class"=> "fa fa-hotel", "text"=>"Rooms");
-      $view_data['nav'][] = array("href" => $base  ."index.php/admin/room_schedules", "class"=> "fa fa-calendar", "text"=>"Schedules");
+      //$view_data['nav'][] = array("href" => $base  ."index.php/admin/room_schedules", "class"=> "fa fa-calendar", "text"=>"Schedules");
       $view_data['nav'][] = array("href" => $base  ."index.php/admin/merchant_profile", "class"=> "fa fa-fax", "text"=>"Profile");
     }
         return $view_data;
@@ -165,6 +165,73 @@ class Admin extends CI_Controller {
         $view_data['tableHtml'] = "template/table.php";
         $this->load->view('admin/dashboard', $view_data);
   }
+
+/*  MERCHANTS TABLE
+*/
+  public function bookings() {
+      $view_data = $this->init_view_data();
+
+      if ($this->session->userdata('username') == "") {
+
+        $this->load->view('login', $view_data);
+        return;
+        #$this->load->view('starter', $view_data);
+      }
+
+      $subData['titleFirst'] = "Bookings";
+      $subData['titleSecond'] = "List";
+      $subData['boxTitle'] = "Bookings List Table";
+      $subData['headers'] = array("Username", "Room", "Check In", "Check Out", "Actions");
+      $subData['data_url'] = base_url() . "index.php/admin/merchants_list?status=0";
+
+      $view_data['subData'] = $subData;
+      $view_data['tableHtml'] = "template/table.php";
+      $this->load->view('admin/tableTemplate', $view_data);
+  }
+
+  public function rooms() {
+      $view_data = $this->init_view_data();
+
+      if ($this->session->userdata('username') == "") {
+
+        $this->load->view('login', $view_data);
+        return;
+        #$this->load->view('starter', $view_data);
+      }
+
+      $subData['titleFirst'] = "Rooms";
+      $subData['titleSecond'] = "List";
+      $subData['boxTitle'] = "Rooms List Table";
+      $subData['headers'] = array("Room", "No. Available", "Booked", "Details", "Actions");
+      $subData['data_url'] = base_url() . "index.php/admin/merchants_list?status=0";
+
+      $view_data['subData'] = $subData;
+      $view_data['tableHtml'] = "template/table.php";
+      $this->load->view('admin/tableTemplate', $view_data);
+  }
+
+  public function merchant_profile() {
+      $view_data = $this->init_view_data();
+
+      if ($this->session->userdata('username') == "") {
+
+        $this->load->view('login', $view_data);
+        return;
+        #$this->load->view('starter', $view_data);
+      }
+
+      $subData['titleFirst'] = "Rooms";
+      $subData['titleSecond'] = "List";
+      $subData['boxTitle'] = "Rooms List Table";
+      $subData['headers'] = array("Room", "No. Available", "Booked", "Details", "Actions");
+      $subData['data_url'] = base_url() . "index.php/admin/merchants_list?status=0";
+
+      $view_data['subData'] = $subData;
+      $view_data['tableHtml'] = "template/table.php";
+      $this->load->view('admin/main', $view_data);
+  }
+
+
 
 
    /* M E R C H A N T S   F O R   A P P R O V A L
